@@ -1,0 +1,55 @@
+/* material-ui */
+@import "node_modules/material-ui/src/less/scaffolding.less";
+
+//Define a custom less file to override any variables defined in scaffolding.less
+@import "custom-overrides.less";
+
+@import "node_modules/material-ui/src/less/components.less";
+
+.example-page {
+	font-family:Roboto;
+}
+
+.tnm {
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+
+.lightgrey {
+	color:@orange-800;
+	text-aligment:center;
+}
+
+.paper {
+	margin-top:10px;
+	padding: 3px;
+	background-color: #EEE;
+}
+
+.paper h6 {
+	padding-left:5px;
+	padding-right:5px;
+	line-height:5px;
+	display:inline;
+}
+
+.paper img {
+	display:inline;
+}
+
+.paper p {
+	padding-left:10px;
+}
+
+.papericon {
+	float:left;
+}
+
+body { 
+    background-image: url('/www/images/bg.png');
+    background-repeat-x: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
