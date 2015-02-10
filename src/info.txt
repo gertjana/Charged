@@ -1,0 +1,36 @@
+Node version: v0.10.28
+
+Cordova version: 4.2.0
+
+Config.xml file: 
+
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.thenewmotion.charged"
+        versionCode = "10" 
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Charged!</name>
+
+    <description>
+        Timeline of charge history with gamification elements
+    </description>
+
+    <author href="https://build.phonegap.com" email="support@phonegap.com">
+        Gertjan Assies
+    </author>
+
+    <preference name="phonegap-version" value="3.6.3" />
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+</widget>
+
+No Plugins Currently Installed
+
+No Platforms Currently Installed
+
