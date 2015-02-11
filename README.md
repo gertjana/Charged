@@ -8,10 +8,11 @@
 * Install node js if you haven't alreayd
 * Clone this repository and then run:
 
-    npm install material-ui
-    npm install
-    npm install -g gulp
-    
+```
+npm install material-ui
+npm install
+npm install -g gulp
+```    
 And then run
 
     gulp
