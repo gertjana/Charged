@@ -20,11 +20,11 @@ var Main = React.createClass({
     return (
       <div className="charged-timeline-page">
         <Toolbar>
-          <ToolbarGroup key={0} float="left">
+          <ToolbarGroup key={0} float="left" innerClassName="header">
             <Icon icon="action-list" onTouchTap={this._showleftNav} />
           </ToolbarGroup>
-          <ToolbarGroup key={1} float="right">
-            <span className="mui-font-style-headline lightgrey">Charged!</span>
+          <ToolbarGroup key={1} float="right" innerClassName="header">
+            <span className="mui-font-style-headline title">Charged!</span>
             <Icon icon="action-favorite" className="tnm" />
           </ToolbarGroup>
         </Toolbar>

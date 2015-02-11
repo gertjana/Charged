@@ -32,5 +32,8 @@ Config.xml file:
 
 No Plugins Currently Installed
 
-No Platforms Currently Installed
+iOS platform:
+
+Xcode 6.0
+Build version 6A313
 
