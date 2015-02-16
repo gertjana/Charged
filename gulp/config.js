@@ -42,6 +42,11 @@ module.exports = {
       entries: src + '/app/app.jsx',
       dest: dest,
       outputName: 'app.js'
+    },
+    {
+      entries: src + '/app/settings.jsx',
+      dest: dest,
+      outputName: 'settings.js'
     }]
   }
 };

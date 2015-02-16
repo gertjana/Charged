@@ -10,12 +10,21 @@ var
   ToolbarGroup = mui.ToolbarGroup,
   Icon = mui.Icon, 
   Paper = mui.Paper,
-  LeftNav = mui.LeftNav
+  LeftNav = mui.LeftNav,
+  MenuItem = mui.MenuItem
   ;
 
 var menuItems = [
-  { route: 'settings', text: "Settings"},
-  { route: 'logout', text: "Logout"}
+  { 
+     type: MenuItem.Types.LINK, 
+     payload: '/index.html', 
+     text: 'Timeline' 
+  },
+  { 
+     type: MenuItem.Types.LINK, 
+     payload: '/settings.html', 
+     text: 'Settings' 
+  }
 ];
 
 var Main = React.createClass({
@@ -68,7 +77,7 @@ var Timeline = React.createClass({
     });
   
     return (
-      <div class="timeline">
+      <div className="timeline">
         {timeLineNodes}
       </div>
     );
