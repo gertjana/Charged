@@ -33,17 +33,18 @@ var Main = React.createClass({
             <Icon icon="action-favorite" className="tnm" />
           </ToolbarGroup>
         </Toolbar>
-        <LeftNav docked={false} menuItems={menuItems}/>
+        <LeftNav ref='leftNav' docked={false} menuItems={menuItems} />
         <Timeline data={this.props.data} />
        </div>
     );
   },
   
   _showleftNav: function() {
-    console.log("boo");
-    LeftNav.docked = true;
+    this.refs.leftNav.toggle();
   }
 });
+
+
 
 var Timeline = React.createClass({
 
