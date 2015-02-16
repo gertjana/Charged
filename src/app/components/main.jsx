@@ -129,9 +129,11 @@ var BadgeItem= React.createClass({
       <Paper zDepth={2} innerClassName="paper">
         <Icon icon={item.icon} innerClassName="papericon" />
         <h6>{item.title}</h6>
-        <p>{item.description}
-          <img src={item.picture} /> 
-        </p>
+        <div>
+          <div className="left">{item.description}</div>
+          <div className="right"><img src={item.picture} /></div>
+        </div>
+        <br className="break" />
       </Paper>
     );
   }
