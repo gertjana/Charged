@@ -50,7 +50,7 @@ var data = [
   //https://github.com/zilverline/react-tap-event-plugin
   injectTapEventPlugin();
 
-  React.initializeTouchEvents(true);
+  //React.initializeTouchEvents(true);
 
   React.render(<Main data={data} userData={userData}/>, document.body);
 
