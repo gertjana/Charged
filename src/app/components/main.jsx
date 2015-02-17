@@ -10,22 +10,9 @@ var
   ToolbarGroup = mui.ToolbarGroup,
   Icon = mui.Icon, 
   Paper = mui.Paper,
-  DropDownMenu = mui.DropDownMenu,
-  MenuItem = mui.MenuItem,
   TextField = mui.TextField,
   RaisedButton = mui.RaisedButton
   ;
-
-var menuItems = [
-  { 
-     payload: '1', 
-     text: 'Timeline' 
-  },
-  { 
-     payload: '2', 
-     text: 'Settings' 
-  }
-];
 
 var Main = React.createClass({
   getInitialState: function() {
@@ -37,7 +24,8 @@ var Main = React.createClass({
       <div className="charged-timeline-page">
         <Toolbar>
           <ToolbarGroup key={0} float="left" innerClassName="header">
-            <DropDownMenu menuItems={menuItems} onChange={this._onMenuClick} />
+            <Icon icon="action-schedule" onTouchTap={this._handleTimeLineTouchTap} />
+            <Icon icon="action-settings" onTouchTap={this._handleSettingsTouchTap} />
           </ToolbarGroup>
           <ToolbarGroup key={1} float="right" innerClassName="header">
             <span className="mui-font-style-headline title">Charged!</span>
@@ -50,12 +38,13 @@ var Main = React.createClass({
        </div>
     );
   },  
-  _onMenuClick: function(e, index, item) {
-    if (item.payload === '1') this.setState({showSettings:false});
-    else this.setState({showSettings:true});
+  _handleTimeLineTouchTap: function(e) {
+    this.setState({showSettings:false});
     e.preventDefault();
-    e.stopPropagation();
-    return false;
+  },
+  _handleSettingsTouchTap: function(e) {
+    this.setState({showSettings:true});
+    e.preventDefault();
   }
 });
 
@@ -161,6 +150,7 @@ var Settings = React.createClass({
       <div>
         <User data={this.props.data} />
         <Cards data={this.props.data} />
+        <About />
       </div>
     )
   }
@@ -174,6 +164,7 @@ var User = React.createClass({
         <h5>User Information</h5>
         <TextField className="up" hintText="name" defaultValue={user.name}
                    floatingLabelText="name" />
+        <br/>
         <TextField className="up" hintText="e-mail" defaultValue={user.email}
                    floatingLabelText="e-mail" />
         <div className="align-right">
@@ -208,5 +199,20 @@ var Cards = React.createClass({
     );
   }
 });
+
+
+var About = React.createClass({
+  render: function() {
+    return (
+      <Paper zDepth={2} innerClassName="about">
+        <h5>About</h5>
+        <p>Charged! is setup as an experiment, an so called MVP (miminal viable product) and provided free of charge.<br/>If there is enough interest, development will continue.</p>
+        <p>For more information you can have a look at <a href="https://github.com/gertjana/Charged">Charged @ Github</a>.</p>
+        <p>Share positive Energy!</p>
+      </Paper>
+    );
+  }
+});
+
 
 module.exports = Main;
