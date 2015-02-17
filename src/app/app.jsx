@@ -21,6 +21,15 @@ var chartData = {
     ]
 };
 
+var userData = {
+  cards: ["NL-TNM-123456-7","NL-TNM-123456-8","NL-TNM-123456-9"],
+  user: {
+    id: "1",
+    email: "g.assies@thenewmotion.com",
+    name: "Gertjan Assies"
+  }
+}
+
 var data = [
     {id:0, "itemtype":"badge",   "icon":"action-bookmark",              "title":"Improving...", "picture":"./images/improve.png", "description":"You charged more today than yesterday, keep up the good work"},
     {id:1, "itemtype":"session", "icon":"device-battery-charging-full", "title":"Charged", "date":"26-03-2015", "kWh":20, "CO2":45},
@@ -41,8 +50,8 @@ var data = [
   //https://github.com/zilverline/react-tap-event-plugin
   injectTapEventPlugin();
 
-  // Render the main app react component into the document body. 
-  // For more details see: https://facebook.github.io/react/docs/top-level-api.html#react.render
-  React.render(<Main data={data} />, document.body);
+  React.initializeTouchEvents(true);
+
+  React.render(<Main data={data} userData={userData}/>, document.body);
 
 })();
