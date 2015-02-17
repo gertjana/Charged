@@ -54,6 +54,8 @@ var Main = React.createClass({
     if (item.payload === '1') this.setState({showSettings:false});
     else this.setState({showSettings:true});
     e.preventDefault();
+    e.stopPropagation();
+    return false;
   }
 });
 
