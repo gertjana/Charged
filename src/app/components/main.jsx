@@ -53,6 +53,7 @@ var Main = React.createClass({
   _onMenuClick: function(e, index, item) {
     if (item.payload === '1') this.setState({showSettings:false});
     else this.setState({showSettings:true});
+    e.preventDefault();
   }
 });
 
