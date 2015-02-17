@@ -168,7 +168,7 @@ var User = React.createClass({
         <TextField className="up" hintText="e-mail" defaultValue={user.email}
                    floatingLabelText="e-mail" />
         <div className="align-right">
-          <RaisedButton label="Connect" primary={true} />
+          <RaisedButton label="Connect to MyTNM" primary={true} />
         </div>
       </Paper>
     );
