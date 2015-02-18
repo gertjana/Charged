@@ -42,16 +42,13 @@ var Cards = React.createClass({
         <table>
           {cards}
         </table>
-        <table>
-          <tr>
-            <td colSpan="2"><TextField ref="card_id" hintText="NL-TNM-XXXXXX-X" floatingLabelText="Add a card" /></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td colSpan="2"><TextField ref="card_name" floatingLabelText="Friendly name"/></td>
-            <td className="add"><RaisedButton label="add" primary={true} onTouchTap={this._handleAddTouchTap} /></td>
-          </tr>
-        </table>
+        <TextField ref="card_id" hintText="NL-TNM-XXXXXX-X" floatingLabelText="Add a card" />
+        <br/>
+        <TextField className="up" ref="card_name" floatingLabelText="Friendly name"/>
+        <br/>
+        <div className="align-right">
+          <RaisedButton label="add" primary={true} onTouchTap={this._handleAddTouchTap} />
+        </div>
       </Paper>
     );
   },
