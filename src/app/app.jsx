@@ -22,12 +22,11 @@ var chartData = {
 };
 
 var userData = {
-  cards: ["NL-TNM-123456-7","NL-TNM-123456-8","NL-TNM-123456-9"],
-  user: {
-    id: "1",
-    email: "g.assies@thenewmotion.com",
-    name: "Gertjan Assies"
-  }
+  cards: [
+    {id:"NL-TNM-123456-7",name:"Main card"},
+    {id:"NL-TNM-123456-8",name:"Spare card"},
+    {id:"NL-TNM-123456-9",name:"The Wife"}
+  ]
 }
 
 var data = [
