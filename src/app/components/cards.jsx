@@ -44,7 +44,7 @@ var Cards = React.createClass({
         </table>
         <TextField ref="card_id" hintText="NL-TNM-XXXXXX-X" floatingLabelText="Add a card" />
         <br/>
-        <TextField className="up" ref="card_name" floatingLabelText="Friendly name"/>
+        <TextField ref="card_name" floatingLabelText="Friendly name"/>
         <br/>
         <div className="align-right">
           <RaisedButton label="add" primary={true} onTouchTap={this._handleAddTouchTap} />
@@ -55,9 +55,20 @@ var Cards = React.createClass({
 
   _handleAddTouchTap: function() {
     var s = this.state;
-    s.cards.push(
-      {id:this.refs.card_id.getValue(), name:this.refs.card_name.getValue()}
-    );
+    var id = this.refs.card_id.getValue().toUpperCase();
+    var name = this.refs.card_name.getValue();
+
+    if (id == "") { this.refs.card_id.setErrorText("Field is required"); return false;}
+    if (name == "") { this.refs.card_name.setErrorText("Field is required"); return false;}
+    if (s.cards.filter(function(i) { return (i.id == id)}).length > 0) {
+      this.refs.card_id.setErrorText("Card already exists");
+      return false;
+    }
+
+    this.refs.card_id.setErrorText("");
+    this.refs.card_name.setErrorText("");
+
+    s.cards.push({id:id, name:name});
     this.setState(s);
   }
 
