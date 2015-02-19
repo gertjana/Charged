@@ -3,17 +3,17 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.thenewmotion.charged"
         versionCode = "10" 
-        version     = "0.0.1" >
+        version     = "0.0.2" >
 
     <!-- versionCode is optional and Android only -->
 
     <name>Charged!</name>
 
     <description>
-        Timeline of charge history with gamification elements /src/www/config.xml
+        Timeline of charge history with gamefication elements
     </description>
 
-    <author href="https://build.phonegap.com" email="support@phonegap.com">
+    <author href="https://build.phonegap.com" email="g.assies@thenewmotion.com">
         Gertjan Assies
     </author>
 

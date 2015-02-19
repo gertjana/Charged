@@ -1,9 +1,9 @@
 module.exports = {
-	targetDirectory: 'phonegap-app',
+	targetDirectory: 'build',
 	phonegapServePort: 3131,
 	app: {
 		namespace: 'com.thenewmotion.charged',
-		version: '0.0.1',
+		version: '0.0.2',
 		name: 'Charged!',
 		description: 'Timeline history of Charge sessions with gamefication elements',
 		author: {

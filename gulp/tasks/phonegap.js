@@ -6,7 +6,7 @@ var PHONEGAP_APP_DIR = configs.targetDirectory;
 var PHONEGAP_DEVELOPER_APP_PORT = configs.phonegapServePort;
 
 gulp.task('copy-config-xml', function(){
-	return gulp.src('./src/config.xml')
+	return gulp.src('./phonegap/config.xml')
 	.pipe(replace(/{NAMESPACE}/g, configs.app.namespace))
 	.pipe(replace(/{VERSION}/g, configs.app.version))
 	.pipe(replace(/{APP_NAME}/g, configs.app.name))
