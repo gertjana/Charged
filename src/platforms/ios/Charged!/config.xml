@@ -21,7 +21,7 @@
     </feature>
     <name>Charged!</name>
     <description>
-        Timeline of charge history with gamification elements
+        Timeline of charge history with gamification elements /src/platforms/charges/ios
     </description>
     <author email="support@phonegap.com" href="https://build.phonegap.com">
         Gertjan Assies
